@@ -1,14 +1,30 @@
-# seat-templates
+# Seat templates
 
-Cookie-cutter tribe seat — soul, think start, home HTML, nginx snippet
+Cookie-cutter for AlloyScape tribe seats (think-server pattern).
 
-## Status
-Scaffold created by AlloyScape Architect Payload (GitHub phase).
+## Live references (Hetzner)
+
+| Seat | Port | Pattern |
+|------|------|---------|
+| Aegis | 8171 | Shield · full toolbelt |
+| Sage | 8176 | Money/structure · force |
+| Elysium | 8174 | 911 aftercare |
+| Moros | 8173 | 911 pre-weight |
+
+## Scaffold layout
+
+```
+templates/seat/
+  soul.system.md
+  start-SEAT-think.sh
+  SEAT-home.html
+  nginx.snippet.conf
+  README.md
+```
 
 ## Rules
-- DONE = files + CI green
-- No secrets in this repo
-- Source plane: GitHub · Demo plane: Hugging Face · Runtime: Hetzner
 
-## Next
-See org payload: `payloads/stephen-architect-2026-08-13/01-DEVELOPER-PAYLOAD.md`
+- Collision-free THINK_PORT
+- Probe-before-invite
+- Soul file is identity source of truth
+- No secrets in templates

@@ -1,12 +1,19 @@
 name: ci
+
 on:
   push:
     branches: [main]
   pull_request:
+
+permissions:
+  contents: read
+
 jobs:
-  smoke:
+  validate-template:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Placeholder
-        run: echo "CI scaffold — replace with real lint/test"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Validate tracked template contract
+        run: python tools/validate_templates.py
+      - name: Validate shell syntax
+        run: bash -n templates/seat/start-SEAT-think.sh
